@@ -44,23 +44,23 @@ printColorsNumber(); // funzione che restituisce il numero di colori dentro un a
 
 
 // ESERCIZIO 4
-// function checkAccess() {
-//     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
-//     const userEmail = prompt('Inserisci il tuo indirizzo email');
+function checkAccess() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-//     let grantAccess = false;// è dichiarato "false" come stringa e non come flag
+    let grantAccess = false; //è dichiarato "false" come stringa e non come flag
 
-//     if (addresses.includes(userEmail)) {
-//         grantAccess = true;// è dichiarato "true" come stringa e non come flag
-//     }
+    if (addresses.includes(userEmail)) {
+        grantAccess = true; //è dichiarato "true" come stringa e non come flag
+    }
 
-//     if (grantAccess === true) {
-//         console.log('Accesso consentito!');
-//     } else {
-//         console.log('Accesso negato!');
-//     }
-// }
-// checkAccess();
+    if (grantAccess === true) {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}
+checkAccess();
 
 
 // ESERCIZIO 5 (suggerimento: c'è un solo errore)
@@ -69,7 +69,7 @@ function checkAccessImproved() {
 
     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-    let grantAccess = 'false';
+    let grantAccess = false;
 
     for (let i = 0; i < addresses.length; i++) {
         const email = addresses[i];
@@ -77,18 +77,18 @@ function checkAccessImproved() {
         if (userEmail.length > 5) {
 
             if (email === userEmail) {
-                grantAccess = 'true';
+                grantAccess = true;
 
             }
 
         }
-
-        if (grantAccess) {
-            console.log('Accesso consentito!');
-        } else {
-            console.log('Accesso negato!');
-        }
     }
-} // mancava la paresntesi di chiusura
+
+    if (grantAccess) {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}; // mancava la paresntesi di chiusura
 
 checkAccessImproved();
