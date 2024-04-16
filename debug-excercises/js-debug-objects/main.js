@@ -25,7 +25,7 @@ const cars = [
     {
         manufacturer: 'Volkswagen',
         model: 'Golf',
-        type: 'Benzina'
+        type: 'benzina'
     },
     {
         manufacturer: 'Fiat',
@@ -50,36 +50,36 @@ const cars = [
     {
         manufacturer: 'Ford',
         model: 'Kuga',
-        type: 'Diesel'
+        type: 'diesel' // D grande
     },
     {
         manufacturer: 'Seat',
         model: 'Ibiza',
         type: 'metano'
-    }
+    },// mancava una virgola
     {
         manufacturer: 'Audi',
         model: 'R8',
-        type: 'Benzina'
+        type: 'benzina'// B grande
     },
 ];
 
-const gasolineCars = cars.filter( (auto) >= auto.type === 'benzina');
+const gasolineCars = cars.filter( (auto) => { // cars. filter per entrare nell'array
+    return auto.type === 'benzina'; // bisogna inserire la condizione nel return
+}); // non era definitva bene l'arrow function
 
-const dieselCars = cars.filter( (auto) => {
-    auto.type === 'diesel';
+const dieselCars = cars.filter( (auto) => {// cars. filter per entrare nell'array
+    return auto.type === 'diesel';// bisogna inserire la condizione nel return
 });
 
-const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'benzina' || auto.type !== 'diesel';
+const otherCars = cars.filter( (auto) => { // cars. filter per entrare nell'array
+    return auto.type !== 'benzina' && auto.type !== 'diesel';
 });
 
 console.log('Auto a benzina');
-console.log('*******************************');
 console.log(gasolineCars);
 
 console.log('Auto a diesel');
-console.log('*******************************');
 console.log(dieselCars);
 
 console.log('Tutte le altre auto');
